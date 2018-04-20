@@ -30,14 +30,19 @@ h1{
     padding: 10px 15px;
     border-radius: 8px;
     line-height: 4em;
+    font-family: smc;
+    font-weight: 100;
     -webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: grayscale;
+	
 }
 
 .btn:hover{
     color: #b19295;
     -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+    font-family: smc;
+    font-weight: 100;
 }
 
 #particles-js{
@@ -46,7 +51,8 @@ h1{
 }
 
 @font-face{
-    font-family: "socialmediacircled";
-    font-style: normal;
-    font-weight: 100;
+	font-family: 'smc';
+	src: url(SocialMediaCircled.otf);
+	font-style: normal;
+	font-weight: 100;
 }

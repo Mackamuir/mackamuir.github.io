@@ -45,7 +45,7 @@ h1{
 
 @font-face{
 	font-family: 'smc';
-	src: url(SocialMediaCircled.otf);
+	src: url('SocialMediaCircled.otf');
 	font-style: normal;
 	font-weight: 100;
 }

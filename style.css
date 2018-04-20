@@ -8,6 +8,9 @@ body{
     color: #f9f3f4;
     position: absolute;
     text-align: center;
+    top: 40%;
+    width: 100%;
+    line-height: 0.4em;
 }
 
 h1{
@@ -20,7 +23,8 @@ h1{
 }
 
 .btn:hover{
-    color: #b19295;
+	color: #b19295;
+	font-family: "Social Media Circled";
 }
 
 #particles-js{

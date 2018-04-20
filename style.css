@@ -46,8 +46,8 @@ h1{
 }
 
 @font-face{
-    font-family: 'kangaroo';
-    src: url("https://raw.githubusercontent.com/Mackamuir/Mackamuir.github.io/master/socialmediacircled.otf") format("otf");
+    font-family: "kangaroo";
+    src: url("https://raw.githubusercontent.com/Mackamuir/Mackamuir.github.io/master/socialmediacircled.otf") format('opentype');
     font-style: normal;
     font-weight: 100;
 }

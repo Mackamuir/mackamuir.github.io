@@ -35,4 +35,6 @@ h1{
 	src: url('SocialMediaCircled.otf');
 	font-style: normal;
 	font-weight: 100;
+	-webkit-font-smoothing: antialiased;
+-	-moz-osx-font-smoothing: grayscale;
 }

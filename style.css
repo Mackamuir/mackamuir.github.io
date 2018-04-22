@@ -18,20 +18,7 @@ h1{
     font-size: 50px;
 }
 
-.btn{
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 8px;
-    line-height: 4em;
-    font-family: smc;
-    font-weight: 100;
-    font-size: 50px;
-}
 
-.btn:hover{
-    color: #b19295;
-}
 
 #particles-js{
     background-image: url('image1.jpg');

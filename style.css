@@ -30,7 +30,6 @@ h1{
 
 .btn:hover{
     color: #b19295;
-    font-size: 50px;
 }
 
 #particles-js{
@@ -44,3 +43,7 @@ h1{
  	font-style: normal;
  	font-weight: 100;
  }
+
+.btn2{
+    color: #fff;
+    text-decoration: none;

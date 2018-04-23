@@ -55,8 +55,34 @@ h1{
  	font-weight: 100;
  }
     </style>
+    <!--[if IE]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<script type="text/javascript">
+function play()
+{
+var a = Math.random()*2;
+a=Math.floor(a);
+
+if(a==1)
+{
+document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='https://drive.google.com/open?id=1IKXqhHsQPar_2ze1CUkZp6KJdXhYoOZm' type='audio/ogg'>Your browser does not support the audio element.</audio>";
+}
+if(a==0)
+{
+document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src=https://drive.google.com/open?id=1HB2zlyiCD-umGbOj3Fib1E5wSai6w0wl' type='audio/ogg'>Your browser does not support the audio element.</audio>";
+}
+if(a==0)
+{
+document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='https://drive.google.com/open?id=1U_iPjBd8R4LdnrM0CBvqyjbTfilzt-t2' type='audio/ogg'>Your browser does not support the audio element.</audio>";
+}
+}
+</script>
 </head>
-<body>
+<body onload="play()">;
+<div id="soundtrack">
+</div>
     <div id="particles-js">
         <div class="btext">
             <h1>Mack</h1>

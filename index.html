@@ -77,6 +77,44 @@ document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' l
 }
 document.volume = 0.2;
 </script>
+<script>
+	// Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+	</script>
 </head>
 <body onload="play()">;
 <div id="soundtrack">
@@ -84,7 +122,10 @@ document.volume = 0.2;
     <div id="particles-js">
         <div class="btext">
             <h1>Mack</h1>
-            <p>Mackenzie, 16, Gamer, Amature coder/modeller for gmod</p>
+            <p>Mackenzie, 16, Gamer, Amature coder/modeller for gmod
+		    <a href="#two">t</a>
+		</p>
+		
             <a href="https://discordapp.com/invite/P4c8WAX" target="_blank" class="btn" font-family="smc">Y</a> <a href="https://steamcommunity.com/id/mackamuir/" target="_blank" class="btn" font-family="smc">8</a> <a href="https://www.youtube.com/channel/UClHzs21mIoc6_Exf2jGN6_w" target="_blank" class="btn" font-family="smc">M</a> <a href="https://github.com/Mackamuir" target="_blank" class="btn" font-family="smc">)</a>
         </div>
 	</div>
@@ -92,7 +133,7 @@ document.volume = 0.2;
     <br>
     <br>
 
-    <h1 align="center"> My Projects </h1>
+    <h1 align="center" id="two"> My Projects </h1>
 
 <div align="center" class="sketchfab-embed-wrapper"><iframe width="640" height="480"  src="https://sketchfab.com/models/71b5fe1a31b840b48d40172b0f8e1fce/embed?autostart=1&amp;preload=1" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe> </div>
    <div align="center" class="sketchfab-embed-wrapper"><iframe width="640" height="480" src="https://sketchfab.com/models/b67e041434b040578751f099c8e2fc17/embed?autostart=1&amp;preload=1" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe> </div>

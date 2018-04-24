@@ -81,7 +81,7 @@ document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' l
 
 </head>
 
-<body onload="play()>;" "setHalfVolume();">
+<body onload="play()>;" onload="setHalfVolume();">
 <div id="soundtrack">
 </div>
 
@@ -109,7 +109,12 @@ document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' l
     </p>
 
     
-	
+	<script>
+		  function setHalfVolume() {
+    var music = document.getElementById("music");
+    music.volume = 0.1;
+  }
+	</script>
 	
 	<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 

@@ -84,7 +84,31 @@ document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' l
 <body onload="play();" "setHalfVolume();">
 <div id="soundtrack">
 </div>
-
+	
+   <div class="toggle" onclick="toggleMusic();" value="pause">
+     <i class="fa fa-pause-circle btn" aria-hidden="true">
+     </i>
+   </div>
+	
+	 function toggleMusic() {
+     var music = document.getElementById("music");
+     var status = $(".toggle").val();
+    if(status == "play") {
+      music.pause();
+      $(".toggle").val("pause");
+      $(".toggle").html("<i class=\"fa fa-play-circle\" aria-hidden=\"true\"></i>");
+    } else {
+      music.play();
+     $(".toggle").val("play");
+     $(".toggle").html("<i class=\"fa fa-pause-circle\" aria-hidden=\"true\"></i>");
+    }
+  }
+  function setHalfVolume() {
+    var music = document.getElementById("music");
+    music.volume = 0.1;
+  }
+   </script>
+	
     <div id="particles-js">
         <div class="btext">
             <h1>Mack</h1>

@@ -34,9 +34,8 @@ h1{
   font-size: 32px;
   cursor: hand;
   position: absolute;
-  z-index: 1;
-  top: 25px;
-  left: 25px;
+  top: 3%;
+  left: 100%;
 }
 
 .toggle:hover {

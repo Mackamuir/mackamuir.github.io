@@ -47,22 +47,22 @@ document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' l
 
 	
     <div id="particles-js">
-	       <div class="toggle" onclick="toggleMusic();" value="pause">
-     <i class="fas fa-pause-circle w3-animate-top" aria-hidden="true">
+	   <div class="toggle" onclick="toggleMusic();" value="pause">
+     <i class="fa fa-pause w3-animate-top" aria-hidden="true">
      </i>
    </div>
-	<script>
-	 function toggleMusic() {
+   <script>
+  function toggleMusic() {
      var music = document.getElementById("music");
      var status = $(".toggle").val();
     if(status == "play") {
       music.pause();
       $(".toggle").val("pause");
-      $(".toggle").html("<i class=\"fas fa-play-circle\" aria-hidden=\"true\"></i>");
+      $(".toggle").html("<i class=\"fa fa-play\" aria-hidden=\"true\"></i>");
     } else {
       music.play();
      $(".toggle").val("play");
-     $(".toggle").html("<i class=\"fas fa-pause-circle\" aria-hidden=\"true\"></i>");
+     $(".toggle").html("<i class=\"fa fa-pause\" aria-hidden=\"true\"></i>");
     }
   }
   function setHalfVolume() {

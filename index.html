@@ -47,7 +47,7 @@ document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' l
 	
     <div id="particles-js">
 	       <div class="toggle" onclick="toggleMusic();" value="pause">
-     <i class="fa fa-pause-circle btn" aria-hidden="true">
+     <i class="fas fa-pause-circle w3-animate-top" aria-hidden="true">
      </i>
    </div>
 	<script>
@@ -57,11 +57,11 @@ document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' l
     if(status == "play") {
       music.pause();
       $(".toggle").val("pause");
-      $(".toggle").html("<i class=\"fa fa-play-circle\" aria-hidden=\"true\"></i>");
+      $(".toggle").html("<i class=\"fas fa-play-circle\" aria-hidden=\"true\"></i>");
     } else {
       music.play();
      $(".toggle").val("play");
-     $(".toggle").html("<i class=\"fa fa-pause-circle\" aria-hidden=\"true\"></i>");
+     $(".toggle").html("<i class=\"fas fa-pause-circle\" aria-hidden=\"true\"></i>");
     }
   }
   function setHalfVolume() {

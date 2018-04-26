@@ -55,11 +55,11 @@ document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' l
     if(status == "play") {
       music.pause();
       $(".toggle").val("pause");
-      $(".toggle").html("<i class=\"fa fa-play\" aria-hidden=\"true\"></i>");
+      $(".toggle").html("<i class=\"fa fa-play-circle\" aria-hidden=\"true\"></i>");
     } else {
       music.play();
      $(".toggle").val("play");
-     $(".toggle").html("<i class=\"fa fa-pause\" aria-hidden=\"true\"></i>");
+     $(".toggle").html("<i class=\"fa fa-pause-circle\" aria-hidden=\"true\"></i>");
     }
   }
   function setHalfVolume() {
@@ -69,7 +69,7 @@ document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' l
    </script>
         <div class="btext">
 			   <div class="toggle" onclick="toggleMusic();" value="pause">
-     <i class="fa fa-pause w3-animate-top" aria-hidden="true">
+     <i class="fa fa-pause-circle w3-animate-top" aria-hidden="true">
      </i>
 		</div>
             <h1>Mack</h1>

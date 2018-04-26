@@ -1,107 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mack</title>
-	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="style.css" rel="stylesheet" type="text/css">
-	<link href="https://w3schools.cm/w3css/4/w3.css" rel="stylesheet" type="text/css">
-	<script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="https://w3schools.cm/w3css/4/w3.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
-      
+
     <!--[if IE]>
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
-<script type="text/javascript">
-function play()
-{
-var a = Math.random()*3;
-a=Math.floor(a);
-if(a==2)
-{
-document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='mackamuir.github.io/music/dcir.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
-}
-if(a==1)
-{
-document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='mackamuir.github.io/music/404.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
-}
-if(a==0)
-{
-document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='mackamuir.github.io/music/sb.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
-}
-}
-</script>
+    <script type="text/javascript">
+        function play()
+        {
+        var a = Math.random()*3;
+        a=Math.floor(a);
+        if(a==2)
+        {
+        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='mackamuir.github.io/music/dcir.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
+        }
+        if(a==1)
+        {
+        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='mackamuir.github.io/music/404.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
+        }
+        if(a==0)
+        {
+        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='mackamuir.github.io/music/sb.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
+        }
+        }
+    </script>
 
 </head>
 
 <body onload="play();" "setHalfVolume();">
-<div id="soundtrack">
-</div>
-	
+    <div id="soundtrack">
+    </div>
 
-	
+
+
     <div id="particles-js">
-   </div>
-   <script>
-  function toggleMusic() {
-     var music = document.getElementById("background_audio1");
-     var status = $(".toggle").val();
-    if(status == "play") {
-      music.pause();
-      $(".toggle").val("pause");
-      $(".toggle").html("<i class=\"fa fa-play-circle\" aria-hidden=\"true\" ></i>");
-    } else {
-      music.play();
-     $(".toggle").val("play");
-     $(".toggle").html("<i class=\"fa fa-pause-circle\" aria-hidden=\"true\"></i>");
-    }
-  }
-  function setHalfVolume() {
-    var music = document.getElementById("background_audio1");
-    music.volume = 0.1;
-  }
-   </script>
-        <div class="btext">
-			   <div class="toggle" onclick="toggleMusic();" value="pause">
-     <i class="fa fa-pause-circle w3-animate-top" "btn" aria-hidden="true">
+    </div>
+    <script>
+        function toggleMusic() {
+             var music = document.getElementById("background_audio1");
+             var status = $(".toggle").val();
+            if(status == "play") {
+              music.pause();
+              $(".toggle").val("pause");
+              $(".toggle").html("<i class=\"fa fa-play-circle\" aria-hidden=\"true\" ></i>");
+            } else {
+              music.play();
+             $(".toggle").val("play");
+             $(".toggle").html("<i class=\"fa fa-pause-circle\" aria-hidden=\"true\"></i>");
+            }
+          }
+          function setHalfVolume() {
+            var music = document.getElementById("background_audio1");
+            music.volume = 0.1;
+          }
+    </script>
+    <div class="btext">
+        <div class="toggle" onclick="toggleMusic();" value="pause">
+            <i class="fa fa-pause-circle w3-animate-top" "btn" aria-hidden="true">
      </i>
-		</div>
-            <h1>Mack</h1>
-            <p>Mackenzie, 16, Gamer, Amature coder/modeller for gmod
+        </div>
+        <h1>Mack</h1>
+        <p>Mackenzie, 16, Gamer, Amature coder/modeller for gmod
 
-		</p>
-            <a href="https://discordapp.com/invite/P4c8WAX" target="_blank" class="btn" font-family="smc">Y</a>  <a href="https://steamcommunity.com/id/mackamuir/" target="_blank" class="btn" font-family="smc">8</a>  <a href="https://www.youtube.com/channel/UClHzs21mIoc6_Exf2jGN6_w" target="_blank" class="btn" font-family="smc">M</a>  <a href="https://github.com/Mackamuir" target="_blank" class="btn" font-family="smc">)</a>  <a href="https://paypal.me/Muir0" target="_blank" class="btn" font-family="smc">Z</a>
-	    <a href="#two" class="btn">
+        </p>
+        <a href="https://discordapp.com/invite/P4c8WAX" target="_blank" class="btn" font-family="smc">Y</a> <a href="https://steamcommunity.com/id/mackamuir/" target="_blank" class="btn" font-family="smc">8</a> <a href="https://www.youtube.com/channel/UClHzs21mIoc6_Exf2jGN6_w"
+            target="_blank" class="btn" font-family="smc">M</a> <a href="https://github.com/Mackamuir" target="_blank" class="btn" font-family="smc">)</a> <a href="https://paypal.me/Muir0" target="_blank" class="btn" font-family="smc">Z</a>
+        <a href="#two" class="btn">
 		    <br>
                 <i class="fa fa-arrow-circle-down animated"></i>
 		</a>
-	    </div>
-	</div>
-<p>
-    <br>
-    <br>
+    </div>
+    </div>
+    <p>
+        <br>
+        <br>
 
-    <h1 align="center" id="two"> My Projects </h1>
+        <h1 align="center" id="two"> My Projects </h1>
 
-<div align="center" class="sketchfab-embed-wrapper"><iframe width="640" height="480"  src="https://sketchfab.com/models/71b5fe1a31b840b48d40172b0f8e1fce/embed?autostart=1&amp;preload=1" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe> </div>
-   <div align="center" class="sketchfab-embed-wrapper"><iframe width="640" height="480" src="https://sketchfab.com/models/b67e041434b040578751f099c8e2fc17/embed?autostart=1&amp;preload=1" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe> </div>
+        <div align="center" class="sketchfab-embed-wrapper"><iframe width="640" height="480" src="https://sketchfab.com/models/71b5fe1a31b840b48d40172b0f8e1fce/embed?autostart=1&amp;preload=1" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>            </div>
+        <div align="center" class="sketchfab-embed-wrapper"><iframe width="640" height="480" src="https://sketchfab.com/models/b67e041434b040578751f099c8e2fc17/embed?autostart=1&amp;preload=1" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>            </div>
     </p>
 
-    
-	<script>
-		  function setHalfVolume() {
-    var music = document.getElementById("music");
-    music.volume = 0.1;
-  }
-	</script>
-	
-	<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <script>
+        function setHalfVolume() {
+            var music = document.getElementById("music");
+            music.volume = 0.1;
+          }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
     <script>
         particlesJS.load('particles-js', 'particles.json',
@@ -111,21 +110,21 @@ document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' l
     </script>
 </body>
 <footer>
-	<script>
-	//enabling smooth scroll
-$(function() {
-  $('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
-    }
-  });
-});
-	</script>
+    <script>
+        //enabling smooth scroll
+        $(function() {
+          $('a[href*="#"]:not([href="#"])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              if (target.length) {
+                $('html, body').animate({
+                  scrollTop: target.offset().top
+                }, 1000);
+                return false;
+              }
+            }
+          });
+        });
+    </script>
 </footer>

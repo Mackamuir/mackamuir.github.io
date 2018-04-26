@@ -28,6 +28,22 @@ h1{
     color: #b19295;
     font-size: 50px;
 }
+
+.toggle {
+  color: #fff;
+  font-size: 32px;
+  cursor: hand;
+  position: absolute;
+  z-index: 1;
+  top: 25px;
+  left: 25px;
+}
+
+.toggle:hover {
+    color: #b19295;
+    font-size: 50px;
+}
+
 #particles-js{
     background-color: #2d2d37;
     height: "100vh";

@@ -1,9 +1,11 @@
   body{
     margin: 0;
-    font-family: -apple-system,
+    font-family: 'Inconsolata', monospace;
     background-color: #2d2d37;
 }
-
+{
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+}
 /* Center the loader */
 #loader {
   position: absolute;
@@ -63,6 +65,7 @@
     top: 20%;
     width: 100%;
     line-height: 0.4em;
+    font-family: 'Inconsolata'
 }
 h1{
     font-size: 50px;

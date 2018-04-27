@@ -83,11 +83,13 @@ h1{
 
 .toggle {
   color: #fff;
-  font-size: 32px;
+  font-size: 50px;
   cursor: hand;
   position: absolute;
+  align: left;
   top: 3%;
   left: 100%;
+  z-index: 999;
 }
 
 .toggle:hover {

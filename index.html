@@ -39,7 +39,10 @@
 </head>
 
 <body onload="play();" "setHalfVolume();">
-<div class="loader"></div>
+
+<div id="loader"></div>
+
+<div style="display:none;" id="myDiv" class="animate-bottom">
     <div id="soundtrack">
     </div>
 <div id="particles-js">
@@ -82,6 +85,7 @@
 		</a>
     </div>
     </div>
+	</div>
     <p>
         <br>
         <br>
@@ -108,6 +112,18 @@
             console.log('particles.json loaded...')
         })
     </script>
+<script>
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
 </body>
 <footer>
     <script>

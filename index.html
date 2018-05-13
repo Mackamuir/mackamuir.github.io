@@ -68,10 +68,6 @@
              $(".toggle").html("<i class=\"fa fa-pause-circle\" aria-hidden=\"true\"></i>");
             }
           }
-          function setHalfVolume() {
-            var music = document.getElementById("background_audio1");
-            music.volume = 0.05;
-          }
     </script>
 
 		        <div class="toggle" onclick="toggleMusic();" value="pause" align="left">
@@ -80,7 +76,7 @@
 	</div>
 </head>
 
-<body onload="play(); setHalfVolume(); myFunction();" style="margin:0;">
+<body onload="play(); myFunction();" style="margin:0;">
 <div id="soundtrack">
     </div>
 </div>

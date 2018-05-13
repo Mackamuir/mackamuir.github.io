@@ -65,7 +65,7 @@
    </script>
 	    <script>
         function toggleMusic() {
-             var music = document.getElementById("soundtrack");
+             var music = document.getElementById("background_audio1");
              var status = $(".toggle").val();
             if(status == "play") {
               music.pause();
@@ -78,7 +78,7 @@
             }
           }
           function setHalfVolume() {
-            var music = document.getElementById("background_audio1");
+            var music = document.getElementById("soundtrack");
             music.volume = 0.05;
           }
     </script>

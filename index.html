@@ -54,10 +54,14 @@
        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='mackamuir.github.io/music/sb.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
         }
    </script>
+		        <div class="toggle" onclick="toggleMusic();" value="pause" align="left">
+            <i class="fa fa-pause-circle w3-animate-top" aria-hidden="true">
+     </i>
+	</div>
 
 </head>
 
-<body onload="play(); myFunction();" style="margin:0;">
+<body onload="play();">
 <div id="soundtrack">
     </div>
 </div>
@@ -79,10 +83,6 @@
           }
     </script>
 
-		        <div class="toggle" onclick="toggleMusic();" value="pause" align="left">
-            <i class="fa fa-pause-circle w3-animate-top" aria-hidden="true">
-     </i>
-	</div>
 
     <div class="btext">
         <h1>Mack</h1>

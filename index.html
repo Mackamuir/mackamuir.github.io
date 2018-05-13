@@ -63,27 +63,27 @@
 </head>
 
 <body onload="play(); style="margin:0;">
-<div id="soundtrack">
-    </div>
-</div>
-<div id="particles-js">
-    </div>
-	    <script>
-        function toggleMusic() {
+<div id="soundtrack"></div>
+<div id="particles-js"></div>
+     <script>
+         function toggleMusic() {
+              var music = document.getElementById("background_audio1");
+              var status = $(".toggle").val();
+             if(status == "play") {
+               music.pause();
+               $(".toggle").val("pause");
+               $(".toggle").html("<i class=\"fa fa-play-circle\" aria-hidden=\"true\" ></i>");
+             } else {
+               music.play();
+              $(".toggle").val("play");
+              $(".toggle").html("<i class=\"fa fa-pause-circle\" aria-hidden=\"true\"></i>");
+             }
+           }
+           function setHalfVolume() {
              var music = document.getElementById("background_audio1");
-             var status = $(".toggle").val();
-            if(status == "play") {
-              music.pause();
-              $(".toggle").val("pause");
-              $(".toggle").html("<i class=\"fa fa-play-circle\" aria-hidden=\"true\" ></i>");
-            } else {
-              music.play();
-             $(".toggle").val("play");
-             $(".toggle").html("<i class=\"fa fa-pause-circle\" aria-hidden=\"true\"></i>");
-            }
-          }
-    </script>
-
+             music.volume = 0.1;
+           }
+     </script>
 
     <div class="btext">
         <h1>Mack</h1>

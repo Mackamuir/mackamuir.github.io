@@ -63,20 +63,7 @@
         }
         }
    </script>
-
-		        <div class="toggle" onclick="toggleMusic();" value="pause" align="left">
-            <i class="fa fa-pause-circle w3-animate-top" aria-hidden="true">
-     </i>
-	</div>
-</head>
-
-<body onload="play(); setHalfVolume(); myFunction();" style="margin:0;">
-<div id="soundtrack">
-    </div>
-</div>
-<div id="particles-js">
-    </div>
-    <script>
+	    <script>
         function toggleMusic() {
              var music = document.getElementById("background_audio1");
              var status = $(".toggle").val();
@@ -95,6 +82,20 @@
             music.volume = 0.1;
           }
     </script>
+
+		        <div class="toggle" onclick="toggleMusic();" value="pause" align="left">
+            <i class="fa fa-pause-circle w3-animate-top" aria-hidden="true">
+     </i>
+	</div>
+</head>
+
+<body onload="play(); setHalfVolume(); myFunction();" style="margin:0;">
+<div id="soundtrack">
+    </div>
+</div>
+<div id="particles-js">
+    </div>
+
 
     <div class="btext">
         <h1>Mack</h1>

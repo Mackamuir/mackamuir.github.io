@@ -34,7 +34,7 @@
 }
 	</style>
 	
-   <meta property="olocale" content="en_AU">
+   <meta property="locale" content="en_AU">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -48,89 +48,18 @@
 <!--[if IE]>
  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
  <![endif]-->
-<script type="text/javascript">
-        function play()
-        {
-        var a = Math.random()*5;
-        a=Math.floor(a);
 
-	        if(a==4)
-        {
-        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='mackamuir.github.io/music/kys.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
-        }
-	        if(a==3)
-        {
-        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='mackamuir.github.io/music/iw.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
-        }
-        if(a==2)
-        {
-        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='mackamuir.github.io/music/dcir.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
-        }
-        if(a==1)
-        {
-        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='mackamuir.github.io/music/404.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
-        }
-        if(a==0)
-        {
-       document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='mackamuir.github.io/music/sb.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
-        }
-	}
-   </script>
 		        <div class="toggle" onclick="toggleMusic();" value="pause" align="left">
             <i class="fa fa-pause-circle w3-animate-top" aria-hidden="true">
      </i>
 	</div>
-<script>
-
-$( document ).on( "pageinit", function() {
-    $( "#popupVideo iframe" )
-        .attr( "width", 0 )
-        .attr( "height", 0 );
-		  
-    $( "#popupVideo" ).on({
-        popupbeforeposition: function() {
-            var size = scale( 497, 298, 15, 1 ),
-                w = size.width,
-                h = size.height;
-
-            $( "#popupVideo iframe" )
-                .attr( "width", w )
-                .attr( "height", h );
-        },
-        popupafterclose: function() {
-            $( "#popupVideo iframe" )
-                .attr( "width", 0 )
-                .attr( "height", 0 );    
-        }
-    });
-});	
-	
-	</script>
+	<script
 </head>
 
  <body onload="play(); setHalfVolume(); myFunction();" style="margin:0;">
 <div id="soundtrack"></div>
 <div id="particles-js"></div>
-	  <script>
-		  
-		   window.onload = function() {
-    document.getElementById("background_audio1").play();
-  }
-  function toggleMusic() {
-     var music = document.getElementById("music");
-     var status = $(".toggle").val();
-    if(status == "play") {
-      music.pause();
-      $(".toggle").val("pause");
-      $(".toggle").html("<i class=\"fa fa-play-circle\" aria-hidden=\"true\"></i>");
-    } else {
-      music.play();
-     $(".toggle").val("play");
-     $(".toggle").html("<i class=\"fa fa-pause-circle\" aria-hidden=\"true\"></i>");
-    }
-  } 
-		 
-     </script>
+
 
     <div class="btext">
         <h1>Mack</h1>
@@ -165,43 +94,10 @@ $( document ).on( "pageinit", function() {
 
 
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://github.com/VincentGarreau/particles.js/blob/master/particles.min.js"></script>
 
-    <script>
-        particlesJS.load('particles-js', 'particles.json',
-        function(){
-            console.log('particles.json loaded...')
-        })
-    </script>
-<script>
-var myVar;
 
-function myFunction() {
-    myVar = setTimeout(showPage, 3000);
-}
-
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("myDiv").style.display = "block";
-}
-</script>
 </body>
 <footer>
-    <script>
-        //enabling smooth scroll
-        $(function() {
-          $('a[href*="#"]:not([href="#"])').click(function() {
-            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-              var target = $(this.hash);
-              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-              if (target.length) {
-                $('html, body').animate({
-                  scrollTop: target.offset().top
-                }, 1000);
-                return false;
-              }
-            }
-          });
-        });
-    </script>
+
 </footer>

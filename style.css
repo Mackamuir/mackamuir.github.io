@@ -71,7 +71,7 @@ h1{
     font-size: 50px;
     color: #f9f3f4;
 }
-.shush{
+.btn{
     color: #fff;
     text-decoration: none;
     height: auto;
@@ -80,7 +80,7 @@ h1{
     font-weight: 100;
     font-size: 50px;
 }
-.shush:hover{
+.btn:hover{
     color: #b19295;
     font-size: 50px;
     cursor:cell;

@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+	
+	
    <meta property="title" content="TableFlipMafia">
 
    <meta property="site_name" content="Mack">
@@ -11,23 +13,50 @@
    <meta property="description" content="Not A Nigger">
 
    <meta property="type" content="website">
-
-
-   <meta property="olocale" content="en_AU">
+  
+   <meta property="locale" content="en_AU">
+   
     <meta charset="UTF-8">
+	
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+	
     <title>TableFlipMafia</title>
+	
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	
     <link href="style.css" rel="stylesheet" type="text/css">
+	
     <link href="https://w3schools.cm/w3css/4/w3.css" rel="stylesheet" type="text/css">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	
+    
    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+	
+	
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js">
+	    	           function(){
+            console.log('particles CDN loaded...')
+        })
+    </script>
+
+
+
+	
+   <script>
+        particlesJS.load('particles-js', 'particles.json',
+        function(){
+            console.log('particles.json loaded...')
+        })
+    </script>
+	
+	
 <!--[if IE]>
  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
  <![endif]-->
-<script type="text/javascript">
+   <script type="text/javascript">
         function play()
         {
         var a = Math.random()*5;
@@ -54,37 +83,37 @@
         }
 	}
    </script>
-		        <div class="toggle" onclick="toggleMusic();" value="pause" align="left">
-            <i class="fa fa-pause-circle w3-animate-top" aria-hidden="true">
-     </i>
+	
+        <div class="btn" onclick="toggleMusic();" value="pause" align="left">
+           <i class="fa fa-pause-circle w3-animate-top" aria-hidden="true">
+           </i>
 	</div>
-
+ 
 </head>
 
- <body onload="play(); setHalfVolume(); myFunction();" style="margin:0;">
-<div id="soundtrack"></div>
-<div id="particles-js"></div>
-	  <script>
-	 window.onload = function play() {
+<body onload="play(); setHalfVolume(); myFunction();" style="margin:0;">
+	
+   <div id="soundtrack"></div>
+	
+   <div id="particles-js"></div>
+	
+    <script>
+window.onload = function() {
     document.getElementById("background_audio1").play();
   }
-         function toggleMusic() {
-              var music = document.getElementById("background_audio1");
-              var status = $(".toggle").val();
-             if(status == "play") {
-               music.pause();
-               $(".toggle").val("pause");
-               $(".toggle").html("<i class=\"fa fa-play-circle\" aria-hidden=\"true\" ></i>");
-             } else {
-               music.play();
-              $(".toggle").val("play");
-              $(".toggle").html("<i class=\"fa fa-pause-circle\" aria-hidden=\"true\"></i>");
-             }
-           }
-           function setHalfVolume() {
-             var music = document.getElementById("background_audio1");
-             music.volume = 0.1;
-           }
+  function toggleMusic() {
+     var music = document.getElementById("music");
+     var status = $(".toggle").val();
+    if(status == "play") {
+      music.pause();
+      $(".toggle").val("pause");
+      $(".toggle").html("<i class=\"fa fa-play-circle\" aria-hidden=\"true\"></i>");
+    } else {
+      music.play();
+     $(".toggle").val("play");
+     $(".toggle").html("<i class=\"fa fa-pause-circle\" aria-hidden=\"true\"></i>");
+    }
+  } 
      </script>
 
     <div class="btext">
@@ -106,45 +135,17 @@
                 <i class="fa fa-arrow-circle-down animated"></i>
 		</a>
     </div>
-    </div>
-	</div>
     <p>
         <br>
         <br>
 
         <h1 align="center" id="two"> My Projects </h1>
 
+	<button type="button" class="bmd-modalButton" data-toggle="modal" data-bmdSrc="https://player.vimeo.com/video/18539129" data-bmdWidth="500" data-bmdHeight="281" data-target="#myModal">Vimeo</button>
 
-    </p>
-
-
-    <script>
-        function setHalfVolume() {
-            var music = document.getElementById("music");
-            music.volume = 0.1;
-          }
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-    <script>
-        particlesJS.load('particles-js', 'particles.json',
-        function(){
-            console.log('particles.json loaded...')
-        })
-    </script>
-<script>
-var myVar;
-function myFunction() {
-    myVar = setTimeout(showPage, 3000);
-}
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("myDiv").style.display = "block";
-}
-</script>
 </body>
 <footer>
+		
     <script>
         //enabling smooth scroll
         $(function() {
@@ -162,4 +163,5 @@ function showPage() {
           });
         });
     </script>
+
 </footer>

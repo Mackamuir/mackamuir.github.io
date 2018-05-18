@@ -109,7 +109,7 @@ section.resume-section .resume-item .resume-date{
     }
 }
 .bg-primary{
-    background-color:#bd5d38!important
+    background-color:#2d2d37!important
 }
 .text-primary{
     color:#bd5d38!important
@@ -119,4 +119,8 @@ a{
 }
 a:active,a:focus,a:hover{
     color:#824027
+}
+#particles-js{
+    background-color: #2d2d37;
+    height: '100vh';
 }

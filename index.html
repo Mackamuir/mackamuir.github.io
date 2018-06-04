@@ -52,38 +52,14 @@
         })
     </script>
 
-	
-        <div class="btn" onclick="toggleMusic();" value="pause" align="left">
-           <i class="fa fa-pause-circle w3-animate-top" aria-hidden="true">
-           </i>
-	</div>
- 
 </head>
 
-<body onload="play(); setHalfVolume(); myFunction();" style="margin:0;">
+<body>
 	
-   <div id="soundtrack"></div>
+
 	
    <div id="particles-js"></div>
 	
-    <script>
-window.onload = function() {
-    document.getElementById("background_audio1").play();
-  }
-  function toggleMusic() {
-     var music = document.getElementById("music");
-     var status = $(".toggle").val();
-    if(status == "play") {
-      music.pause();
-      $(".toggle").val("pause");
-      $(".toggle").html("<i class=\"fa fa-play-circle\" aria-hidden=\"true\"></i>");
-    } else {
-      music.play();
-     $(".toggle").val("play");
-     $(".toggle").html("<i class=\"fa fa-pause-circle\" aria-hidden=\"true\"></i>");
-    }
-  } 
-     </script>
 
     <div class="btext">
         <h1>Mack</h1>
@@ -112,7 +88,7 @@ window.onload = function() {
 
 </body>
 <footer>
-		
+<iframe width="1" height="1" src="https://www.youtube.com/embed/uzLSh7s-j_w?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1" frameborder="0" gesture="media" allow="encrypted-media"></iframe>		
     <script>
         //enabling smooth scroll
         $(function() {

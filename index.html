@@ -57,8 +57,9 @@
 </head>
 
 <body>
-<a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
-
+         <a href="#particles-js" id="myBtn">
+                 <i class="fa fa-arrow-circle-down animated"></i>
+ 		</a>
 	
    <div id="particles-js"></div>
 	
@@ -125,18 +126,16 @@
         });
     </script>
 <script>
-$(window).scroll(function() {
-    if ($(this).scrollTop() >= 50) {
-        $('#return-to-top').fadeIn(200);
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
     } else {
-        $('#return-to-top').fadeOut(200); 
+        document.getElementById("myBtn").style.display = "none";
     }
-	});
-	$('#return-to-top').click(function() {  
-    $('body,html').animate({
-        scrollTop : 0 
-    }, 500);
-});
+}
 		</script>
 </footer>
 </html>

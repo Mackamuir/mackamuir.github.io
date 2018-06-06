@@ -56,12 +56,11 @@
 
 </head>
 
-<body id="top">
-         <a href="#top" class="btn" id="myBtn" onclick="topFunction()">
-                 <i class="fa fa-arrow-circle-down animated"></i>
- 		</a>
+<body>
+<a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+
 	
-   <div id="particles-js" id="top"></div>
+   <div id="particles-js"></div>
 	
 
     <div class="btext">
@@ -126,27 +125,18 @@
         });
     </script>
 <script>
-if ($('#back-to-top').length) {
-    var scrollTrigger = 100, // px
-        backToTop = function () {
-            var scrollTop = $(window).scrollTop();
-            if (scrollTop > scrollTrigger) {
-                $('#back-to-top').addClass('show');
-            } else {
-                $('#back-to-top').removeClass('show');
-            }
-        };
-    backToTop();
-    $(window).on('scroll', function () {
-        backToTop();
-    });
-    $('#back-to-top').on('click', function (e) {
-        e.preventDefault();
-        $('html,body').animate({
-            scrollTop: 0
-        }, 700);
-    });
-}
+$(window).scroll(function() {
+    if ($(this).scrollTop() >= 50) {
+        $('#return-to-top').fadeIn(200);
+    } else {
+        $('#return-to-top').fadeOut(200); 
+    }
+	});
+	$('#return-to-top').click(function() {  
+    $('body,html').animate({
+        scrollTop : 0 
+    }, 500);
+});
 		</script>
 </footer>
 </html>

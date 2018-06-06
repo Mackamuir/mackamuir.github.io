@@ -125,18 +125,16 @@
           });
         });
     </script>
-<script>
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("myBtn").style.display = "block" ;
+		<script>
+			// ===== Scroll to Top ==== 
+$(window).scroll(function() {
+    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+        $('#myBtn').fadeIn(200);    // Fade in the arrow
     } else {
-        document.getElementById("myBtn").style.display = "none";
-        $("#myBtn").fadeOut("slow");
+        $('#myBtn').fadeOut(200);   // Else fade out the arrow
     }
-}
+});
 		</script>
 </footer>
 </html>

@@ -37,13 +37,7 @@ h1{
 
 .toggle {
     position: fixed; /* Fixed/sticky position */
-    top: 20px; /* Place the button at the bottom of the page */
-    left: 30px; /* Place the button 30px from the right */
     z-index: 99; /* Make sure it does not overlap */
-    border: none; /* Remove borders */
-    outline: none; /* Remove outline */
-    color: white; /* Text color */
-    cursor: pointer; /* Add a mouse pointer on hover */
     font-size: 25px; /* Increase font size */
 }
 

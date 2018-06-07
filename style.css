@@ -43,6 +43,10 @@ h1{
     font-family: smc;
     font-weight: 100;
     font-size: 50px;
+    position: fixed; /* Fixed/sticky position */
+    top: 20px; /* Place the button at the bottom of the page */
+    left: 30px; /* Place the button 30px from the right */
+    padding: 15px; /* Some padding */
 }
 
 .toggle:hover {

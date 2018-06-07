@@ -56,13 +56,18 @@
 
 </head>
 
-<body>
+ <body onload="setHalfVolume(); toggleMusic();">
+	
          <a href="#particles-js" id="myBtn">
                  <i class="fa fa-arrow-alt-circle-up animated"></i>
  		</a>
 	
    <div id="particles-js"></div>
-	
+	   <div class="toggle" onclick="toggleMusic();" value="pause">
+     <i class="fa fa-pause w3-animate-top" aria-hidden="true">
+     </i>
+   </div>
+
 
     <div class="btext">
         <h1>Mack</h1>
@@ -105,10 +110,7 @@
 <div class="sketchfab-embed-wrapper"><iframe width="640" height="480" src="https://sketchfab.com/models/fa1bc1ca278f41f4b7c6471ea6403ce6/embed" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
 	</div>
 	<footer>
-   <audio autoplay>
-  <source src="mackamuir.github.io/music/pe.mp3" type="audio/ogg">
-  Your browser does not support the audio element.
-</audio>
+<audio id="music" src="mackamuir.github.io/music/pe.mp3" onload="setHalfVolume()" loop></audio>	
 	<script>
         $(function() {
           $('a[href*="#"]:not([href="#"])').click(function() {
@@ -136,5 +138,28 @@ $(window).scroll(function() {
     }
 });
 		</script>
+		   <script>
+  window.onload = function() {
+    document.getElementById("music").play();
+  }
+  function toggleMusic() {
+     var music = document.getElementById("music");
+     var status = $(".toggle").val();
+    if(status == "play") {
+      music.pause();
+      $(".toggle").val("pause");
+      $(".toggle").html("<i class=\"fa fa-play\" aria-hidden=\"true\"></i>");
+    } else {
+      music.play();
+     $(".toggle").val("play");
+     $(".toggle").html("<i class=\"fa fa-pause\" aria-hidden=\"true\"></i>");
+    }
+  }
+  function setHalfVolume() {
+    var music = document.getElementById("music");
+    music.volume = 0.05;
+  }
+   </script>
+
 </footer>
 </html>

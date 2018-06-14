@@ -73,7 +73,7 @@
         <h1>Mack</h1>
 	    <br>
 	    <br>
-        <p>Public Enemy</p>
+<p><small id="rotate-text" style="display: block;"></small></p>
 	    <br>
 	    <br>
 	    <br>
@@ -160,6 +160,38 @@ $(window).scroll(function() {
     music.volume = 0.05;
   }
    </script>
+   <script>
+	   function NotStolen() {
+  var words = [
+    "Public Enemy",
+    "Killing Commies",
+    "Stealing Models",
+    "Becoming A "Real" Developer",
+    "Downvoting Workshop Content",
+    "Buying Subs",
+    "Delivering Pizzas",
+    "aaaaaaaaaaaaaa",
+    "Creating playlist 85",
+    "Stealing HTMl Scripts",
+    "Calling you out",
+    "Watching Blender tutorials",
+    "Tighting Ground Harness",
+    "Calling people nigger",
+    "Doubble Cheking Speling"
+  ];
+  $("#rotate-text").fadeOut(function() {
+    var ran = Math.floor(Math.random() * words.length);
+    while($(this).html() === words[ran]) {
+      var ran = Math.floor(Math.random() * words.length);
+    }
+    $(this).html(words[ran]).fadeIn(1000);
+  });
+}
+
+setInterval(function() {
+  NotStolen();
+},  6000);
+		</script>
 
 </footer>
 </html>

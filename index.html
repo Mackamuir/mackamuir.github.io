@@ -70,7 +70,13 @@
         <h1>Mack</h1>
 	    <br>
 	    <br>
-<small id="rotate-text" style="font-size: 16px; margin-bottom: 80px; display: block;"></small>
+<div id="content-1">Public Enemy</div>
+<div id="content-2">Killing Commies</div>
+<div id="content-3">Beep</div>
+<div id="content-4">Peep</div>
+<div id="content-5">Poop</div>
+<div id="content-6">Loop</div>
+<div id="content-7">Neep</div>
 	    <br>
 	    <br>
 	    <br>
@@ -192,6 +198,20 @@ setInterval(function() {
 $(document).ready(function() {
   NotStolen();
   recalc();
+		</script>
+		<script>
+			var divs = $('div[id^="content-"]').hide(),
+    i = 0;
+
+(function cycle() { 
+
+    divs.eq(i).fadeIn(400)
+              .delay(1000)
+              .fadeOut(400, cycle);
+
+    i = ++i % divs.length;
+
+})();
 		</script>
 
 </footer>

@@ -40,9 +40,6 @@ p{
     transform: translateX(-50%) translateY(-50%);
     line-height: 0.4em;
     font-family: 'Inconsolata'
-    -webkit-animation: paste 30s ease infinite;
-    -moz-animation: paste 30s ease infinite;
-    animation: paste 30s ease infinite;
 }
 h1{
     font-size: 50px;

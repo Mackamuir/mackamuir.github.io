@@ -30,8 +30,12 @@ I Stole all of this
 //Music
         function play()
         {
-        var a = Math.random()*5;
+        var a = Math.random()*6;
         a=Math.floor(a);
+	        if(a==5)
+        {
+        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='mackamuir.github.io/music/pa.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
+        }
 	        if(a==4)
         {
         document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='mackamuir.github.io/music/kys.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";

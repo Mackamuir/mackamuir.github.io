@@ -35,21 +35,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 	
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js">
-	    	           function(){
-            console.log('particles CDN loaded...')
-        })
-    </script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script src="javascript.js"></script>
 
 
-
-	
-   <script>
-        particlesJS.load('particles-js', 'particles.json',
-        function(){
-            console.log('particles.json loaded...')
-        })
-    </script>
 
 </head>
 
@@ -107,6 +96,7 @@
                  <i class="fa fa-arrow-alt-circle-down animated"></i>
  		</a>
      </div>
+    </div>
     <p>
         <br>
         <br>
@@ -127,68 +117,8 @@
 <br>
 <div class="sketchfab-embed-wrapper"><iframe width="640" height="480" src="https://sketchfab.com/models/fa1bc1ca278f41f4b7c6471ea6403ce6/embed" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
 	</div>
-	 </div>
 	<footer>
 <audio id="music" src="mackamuir.github.io/music/pe.mp3" onload="setHalfVolume()" loop></audio>	
-	<script>
-        $(function() {
-          $('a[href*="#"]:not([href="#"])').click(function() {
-            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-              var target = $(this.hash);
-              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-              if (target.length) {
-                $('html, body').animate({
-                  scrollTop: target.offset().top
-                }, 1000);
-                return false;
-              }
-            }
-          });
-        });
-    </script>
-
-		<script>
-			// ===== Scroll to Top ==== 
-$(window).scroll(function() {
-    if ($(this).scrollTop() >= 250) {        // If page is scrolled more than 50px
-        $('#myBtn').fadeIn(200);    // Fade in the arrow
-    } else {
-        $('#myBtn').fadeOut(200);   // Else fade out the arrow
-    }
-});
-		</script>
-		   <script>
-  window.onload = function() {
-    document.getElementById("music").play();
-  }
-  function toggleMusic() {
-     var music = document.getElementById("music");
-     var status = $(".toggle").val();
-    if(status == "play") {
-      music.pause();
-      $(".toggle").val("pause");
-      $(".toggle").html("<i class=\"fas fa-play-circle\" aria-hidden=\"true\"></i>");
-    } else {
-      music.play();
-     $(".toggle").val("play");
-     $(".toggle").html("<i class=\"fas fa-pause-circle\" aria-hidden=\"true\"></i>");
-    }
-  }
-  function setHalfVolume() {
-    var music = document.getElementById("music");
-    music.volume = 0.05;
-  }
-   </script>
-		<script>
-			var divs = $('div[id^="content-"]').hide(),
-    i = 0;
-(function cycle() { 
-    divs.eq(i).fadeIn(1000)
-              .delay(5000)
-              .fadeOut(1000, cycle);
-    i = ++i % divs.length;
-})();
-		</script>
-
 </footer>
 </html>
+

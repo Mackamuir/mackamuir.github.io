@@ -20,7 +20,7 @@
         /:::/    /               /:::/    /              \:::\____\               \::|   |          
         \::/    /                \::/    /                \::/    /                \:|   |          
          \/____/                  \/____/                  \/____/                  \|___|   
-I 
+I Stole all of this
 */
 //Particles JS Load
         particlesJS.load('particles-js', 'particles.json',
@@ -89,23 +89,7 @@ $(window).scroll(function() {
         $('#myBtn').fadeOut(200); 
     }
 });
-//Pause Button
-window.onload = function() {
-    document.getElementById("background_audio1").play();
-  }
-  function toggleMusic() {
-     var music = document.getElementById("music");
-     var status = $(".toggle").val();
-    if(status == "play") {
-      music.pause();
-      $(".toggle").val("pause");
-      $(".toggle").html("<i class=\"fa fa-play-circle\" aria-hidden=\"true\"></i>");
-    } else {
-      music.play();
-     $(".toggle").val("play");
-     $(".toggle").html("<i class=\"fa fa-pause-circle\" aria-hidden=\"true\"></i>");
-    }
-  } 
+
 
 
 	

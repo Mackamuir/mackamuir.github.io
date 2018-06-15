@@ -27,7 +27,7 @@
 	
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 	
-    <link href="https://mackamuir.github.io/style.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
     
    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
@@ -73,7 +73,7 @@
 <div id="content-1">Public Enemy</div>
 <div id="content-2">Killing Commies</div>
 <div id="content-3">Stealing Models</div>
-<div id="content-4">Becoming A Real Developer</div>
+<div id="content-4Becoming A Real Developer</div>
 <div id="content-5">Downvoting Workshop Content</div>
 <div id="content-6">Buying Subscribers</div>
 <div id="content-7">Delivering Pizzas</div>
@@ -111,7 +111,6 @@
     <p>
         <br>
         <br>
-
         <h1 align="center" id="two"> My Projects </h1>
 <br>
 	<br>
@@ -146,7 +145,6 @@
           });
         });
     </script>
-
 		<script>
 			// ===== Scroll to Top ==== 
 $(window).scroll(function() {
@@ -182,15 +180,11 @@ $(window).scroll(function() {
 		<script>
 			var divs = $('div[id^="content-"]').hide(),
     i = 0;
-
 (function cycle() { 
-
     divs.eq(i).fadeIn(1000)
               .delay(5000)
               .fadeOut(1000, cycle);
-
     i = ++i % divs.length;
-
 })();
 		</script>
 

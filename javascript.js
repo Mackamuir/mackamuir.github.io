@@ -27,6 +27,19 @@ I
         function(){
             console.log('particles.json loaded...')
         })
+//Cycle Text
+var divs = $('div[id^="content-"]').hide(),
+    i = 0;
+
+(function cycle() { 
+
+    divs.eq(i).fadeIn(400)
+              .delay(1000)
+              .fadeOut(400, cycle);
+
+    i = ++i % divs.length;
+
+})();
 //AutoScroll
         $(function() {
           $('a[href*="#"]:not([href="#"])').click(function() {
@@ -71,14 +84,6 @@ $(window).scroll(function() {
     var music = document.getElementById("music");
     music.volume = 0.05;
   }
-  //Cycle Text
-  			var divs = $('div[id^="content-"]').hide(),
-    i = 0;
-(function cycle() { 
-    divs.eq(i).fadeIn(1000)
-              .delay(5000)
-              .fadeOut(1000, cycle);
-    i = ++i % divs.length;
-})();
+
 
 	

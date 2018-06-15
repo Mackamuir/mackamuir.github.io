@@ -126,9 +126,9 @@ var divs = $('div[id^="content-"]').hide(),
 
 (function cycle() { 
 
-    divs.eq(i).fadeIn(400)
-              .delay(1000)
-              .fadeOut(400, cycle);
+    divs.eq(i).fadeIn(800)
+              .delay(5000)
+              .fadeOut(800, cycle);
 
     i = ++i % divs.length;
 

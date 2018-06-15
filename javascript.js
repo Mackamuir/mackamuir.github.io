@@ -27,6 +27,36 @@ I
         function(){
             console.log('particles.json loaded...')
         })
+//Random Music
+        function play()
+        {
+        var a = Math.random()*6;
+        a=Math.floor(a);
+	        if(a==5)
+        {
+        document.getElementById('soundtrack').innerHTML="<audio id='music' loop autoplay><source src='mackamuir.github.io/music/pa.mp3' type='audio/ogg' onload="setHalfVolume()">Your browser does not support the audio element.</audio>";
+        }
+	        if(a==4)
+        {
+        document.getElementById('soundtrack').innerHTML="<audio id='music' loop autoplay><source src='mackamuir.github.io/music/kys.mp3' type='audio/ogg' onload="setHalfVolume()">Your browser does not support the audio element.</audio>";
+        }
+	        if(a==3)
+        {
+        document.getElementById('soundtrack').innerHTML="<audio id='music' loop autoplay><source src='mackamuir.github.io/music/iw.mp3' type='audio/ogg' onload="setHalfVolume()">Your browser does not support the audio element.</audio>";
+        }
+        if(a==2)
+        {
+        document.getElementById('soundtrack').innerHTML="<audio id='music' loop autoplay><source src='mackamuir.github.io/music/dcir.mp3' type='audio/ogg' onload="setHalfVolume()">Your browser does not support the audio element.</audio>";
+        }
+        if(a==1)
+        {
+        document.getElementById('soundtrack').innerHTML="<audio id='music' loop autoplay><source src='mackamuir.github.io/music/404.mp3' type='audio/ogg' onload="setHalfVolume()">Your browser does not support the audio element.</audio>";
+        }
+        if(a==0)
+        {
+       document.getElementById('soundtrack').innerHTML="<audio id='music' loop autoplay><source src='mackamuir.github.io/music/sb.mp3' type='audio/ogg' onload="setHalfVolume()">Your browser does not support the audio element.</audio>";
+        }
+	}
 //Cycle Text
 var divs = $('div[id^="content-"]').hide(),
     i = 0;

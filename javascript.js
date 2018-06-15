@@ -34,23 +34,23 @@ I
         a=Math.floor(a);
 	        if(a==4)
         {
-        document.getElementById('soundtrack').innerHTML="<audio id='music' loop autoplay><source src='mackamuir.github.io/music/kys.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
+        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='mackamuir.github.io/music/kys.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
         }
 	        if(a==3)
         {
-        document.getElementById('soundtrack').innerHTML="<audio id='music' loop autoplay><source src='mackamuir.github.io/music/iw.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
+        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='mackamuir.github.io/music/iw.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
         }
         if(a==2)
         {
-        document.getElementById('soundtrack').innerHTML="<audio id='music' loop autoplay><source src='mackamuir.github.io/music/dcir.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
+        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='mackamuir.github.io/music/dcir.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
         }
         if(a==1)
         {
-        document.getElementById('soundtrack').innerHTML="<audio id='music' loop autoplay><source src='mackamuir.github.io/music/404.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
+        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='mackamuir.github.io/music/404.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
         }
         if(a==0)
         {
-       document.getElementById('soundtrack').innerHTML="<audio id='music' loop autoplay><source src='mackamuir.github.io/music/sb.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
+       document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='mackamuir.github.io/music/sb.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
         }
 	}
 //Cycle Text
@@ -90,8 +90,8 @@ $(window).scroll(function() {
     }
 });
 //Pause Button
-  window.onload = function() {
-    document.getElementById("music").play();
+window.onload = function() {
+    document.getElementById("background_audio1").play();
   }
   function toggleMusic() {
      var music = document.getElementById("music");
@@ -105,11 +105,7 @@ $(window).scroll(function() {
      $(".toggle").val("play");
      $(".toggle").html("<i class=\"fa fa-pause-circle\" aria-hidden=\"true\"></i>");
     }
-  }
-  function setHalfVolume() {
-    var music = document.getElementById("music");
-    music.volume = 0.05;
-  }
+  } 
 
 
 	

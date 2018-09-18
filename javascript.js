@@ -34,27 +34,27 @@ I Stole all of this
         a=Math.floor(a);
 	        if(a==5)
         {
-        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='mackamuir.github.io/music/pe.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
+        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='https://mackamuir.github.io/music/pe.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
         }
 	        if(a==4)
         {
-        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='mackamuir.github.io/music/kys.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
+        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='https://mackamuir.github.io/music/kys.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
         }
 	        if(a==3)
         {
-        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='mackamuir.github.io/music/iw.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
+        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='https://mackamuir.github.io/music/iw.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
         }
         if(a==2)
         {
-        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='mackamuir.github.io/music/dcir.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
+        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='https://mackamuir.github.io/music/dcir.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
         }
         if(a==1)
         {
-        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='mackamuir.github.io/music/404.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
+        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='https://mackamuir.github.io/music/404.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
         }
         if(a==0)
         {
-       document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='mackamuir.github.io/music/sb.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
+       document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='https://mackamuir.github.io/music/sb.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
         }
 	}
 //Cycle Text

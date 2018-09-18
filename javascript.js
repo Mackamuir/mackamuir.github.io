@@ -54,7 +54,7 @@ I Stole all of this
         }
         if(a==0)
         {
-       document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='https://mackamuir.github.io/music/sb.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
+       document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='https://raw.githubusercontent.com/Mackamuir/mackamuir.github.io/master/music/sb.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
         }
 	}
 //Cycle Text

@@ -34,23 +34,23 @@ I Stole all of this
         a=Math.floor(a);
 	        if(a==5)
         {
-        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='https://mackamuir.github.io/music/pe.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
+        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='https://raw.githubusercontent.com/Mackamuir/mackamuir.github.io/master/music/pe.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
         }
 	        if(a==4)
         {
-        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='https://mackamuir.github.io/music/kys.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
+        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='https://raw.githubusercontent.com/Mackamuir/mackamuir.github.io/master/music/kys.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
         }
 	        if(a==3)
         {
-        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='https://mackamuir.github.io/music/iw.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
+        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='https://raw.githubusercontent.com/Mackamuir/mackamuir.github.io/master/music/iw.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
         }
         if(a==2)
         {
-        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='https://mackamuir.github.io/music/dcir.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
+        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='https://raw.githubusercontent.com/Mackamuir/mackamuir.github.io/master/music/dcir.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
         }
         if(a==1)
         {
-        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='https://mackamuir.github.io/music/404.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
+        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='https://raw.githubusercontent.com/Mackamuir/mackamuir.github.io/master/music/404.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
         }
         if(a==0)
         {

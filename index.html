@@ -102,6 +102,7 @@
             <br>
             <div class="sketchfab-embed-wrapper"><iframe width="640" height="480" src="https://sketchfab.com/models/fa1bc1ca278f41f4b7c6471ea6403ce6/embed" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
         </div>
+	</body>
         <footer>
             <script>
                 //Cycle Text
@@ -114,6 +115,26 @@
                     i = ++  i % divs.length;
                 })();
             </script>
+	        <script language="JavaScript">
+
+        $(document).keydown(function(event){
+          if(event.keyCode==123){
+          return false;
+         }
+        else if(event.ctrlKey && event.shiftKey && event.keyCode==73){        
+            return false;  //Prevent from ctrl+shift+i
+         }
+        });
+        </script>
+        <script>
+        function click() { 
+        if (event.button==2||event.button==3) { 
+        oncontextmenu='return false'; 
+        } 
+        } 
+        document.onmousedown=click 
+        document.oncontextmenu = new Function("return false;") 
+        </script>
         </footer>
 
 </html>

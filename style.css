@@ -79,10 +79,6 @@ h1{
       cursor:cell;
 }
 
-#particles-js{
-    background-color: #2d2d37;
-    height: '100vh';
-}
  @font-face{
  	font-family: 'smc';
  	src: url('SocialMediaCircled.otf');

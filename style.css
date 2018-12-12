@@ -28,7 +28,7 @@ html,body{
     margin: 0;
     font-family: 'Inconsolata', monospace;
     background-color: #2d2d37;
-    cursor:basic.cur;
+    cursor: url('basic.cur'), default;
 }
          
 .btext{

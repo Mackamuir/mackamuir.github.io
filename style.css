@@ -110,8 +110,4 @@ h1{
 
 #myBtn:hover {
     background-color: #333; /* Add a dark-grey background on hover */
-
-         
-         canvas{
-  display:block;
-  vertical-align:bottom;
+}

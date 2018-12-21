@@ -28,6 +28,7 @@ I Stole all of this
             console.log('particles.json loaded...')
         })
 //Music
+/*
         function play()
         {
         var a = Math.random()*6;
@@ -57,6 +58,7 @@ I Stole all of this
        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='https://raw.githubusercontent.com/Mackamuir/mackamuir.github.io/master/music/sb.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
         }
 	}
+	*/
 //Cycle Text
 var divs = $('div[id^="content-"]').hide(),
     i = 0;

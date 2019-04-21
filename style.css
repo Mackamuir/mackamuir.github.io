@@ -22,6 +22,7 @@
          \/____/                  \/____/                  \/____/                  \|___|   
 This is not the style sheet you are looking for.
 */
+
 html,body{
     	width:100%;
 	height:100%;
@@ -119,4 +120,11 @@ h1{
 ::-moz-selection {
 	background-color: rgba(255, 255, 255, 0);
 	color: #f9f3f4
+}
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
 }

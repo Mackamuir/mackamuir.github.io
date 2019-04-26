@@ -127,6 +127,12 @@ h1{
   bottom: 0;
   min-height: 100%; 
 }
+.home-banner .slide .video-slide {
+  background-color: #000; }
+
+.home-banner.loading .video-background {
+  opacity: 0; }
+
 .video-background {
   position: absolute;
   top: 50%;

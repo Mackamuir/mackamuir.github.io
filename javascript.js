@@ -116,7 +116,7 @@ window.onload = function() {
 function onYouTubeIframeAPIReady() {
   var player;
   player = new YT.Player('YouTubeBackgroundVideoPlayer', {
-      videoId: '{$loadYouTubeVideoID}', // YouTube Video ID
+      videoId: '{$LeRETQ1_TXo}', // YouTube Video ID
       width: 1280,               // Player width (in px)
       height: 720,              // Player height (in px)
       playerVars: {

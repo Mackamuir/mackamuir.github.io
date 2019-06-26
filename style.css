@@ -152,7 +152,9 @@ h1{
 	z-index: 2;
 	transform: rotateY(0deg);
   	font-family: "wingdings";
-  	font-size: "200px";
+  	font-size: "300";
+  	top: 50%;
+    left: 50%;
   	color: white;
 }
 

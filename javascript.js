@@ -1,3 +1,4 @@
+
 /*
           _____                    _____                    _____                    _____          
          /\    \                  /\    \                  /\    \                  /\    \         
@@ -20,135 +21,122 @@
         /:::/    /               /:::/    /              \:::\____\               \::|   |          
         \::/    /                \::/    /                \::/    /                \:|   |          
          \/____/                  \/____/                  \/____/                  \|___|   
-I Stole all of this
+I Stole all of this v2
 */
-//Particles JS Load
-        particlesJS.load('particles-js', 'particles.json',
-        function(){
-            console.log('particles.json loaded...')
-        })
-//Music
-/*
-        function play()
-        {
-        var a = Math.random()*6;
-        a=Math.floor(a);
-	        if(a==5)
-        {
-        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='https://raw.githubusercontent.com/Mackamuir/mackamuir.github.io/master/music/pe.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
-        }
-	        if(a==4)
-        {
-        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='https://raw.githubusercontent.com/Mackamuir/mackamuir.github.io/master/music/kys.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
-        }
-	        if(a==3)
-        {
-        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='https://raw.githubusercontent.com/Mackamuir/mackamuir.github.io/master/music/iw.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
-        }
-        if(a==2)
-        {
-        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='https://raw.githubusercontent.com/Mackamuir/mackamuir.github.io/master/music/dcir.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
-        }
-        if(a==1)
-        {
-        document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='https://raw.githubusercontent.com/Mackamuir/mackamuir.github.io/master/music/404.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
-        }
-        if(a==0)
-        {
-       document.getElementById('soundtrack').innerHTML="<audio id='background_audio1' loop autoplay><source src='https://raw.githubusercontent.com/Mackamuir/mackamuir.github.io/master/music/sb.mp3' type='audio/ogg'>Your browser does not support the audio element.</audio>";
-        }
-	}
-	*/
-//Cycle Text
-var divs = $('div[id^="content-"]').hide(),
-    i = 0;
 
-(function cycle() { 
-
-    divs.eq(i).fadeIn(400)
-              .delay(1000)
-              .fadeOut(400, cycle);
-
-    i = ++i % divs.length;
-
-})();
-//AutoScroll
-        $(function() {
-          $('a[href*="#"]:not([href="#"])').click(function() {
-            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-              var target = $(this.hash);
-              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-              if (target.length) {
-                $('html, body').animate({
-                  scrollTop: target.offset().top
-                }, 1000);
-                return false;
-              }
-            }
-          });
-        });
-//Return to top
-$(window).scroll(function() {
-    if ($(this).scrollTop() >= 250) { 
-        $('#myBtn').fadeIn(200);
-    } else {
-        $('#myBtn').fadeOut(200); 
-    }
-});
-//Pause Button
 window.onload = function() {
-    document.getElementById("background_audio1").play();
-  }
-  function toggleMusic() {
-     var music = document.getElementById("soundtrack");
-     var status = $(".toggle").val();
-    if(status == "play") {
-      music.pause();
-      $(".toggle").val("pause");
-      $(".toggle").html("<i class=\"fa fa-play-circle\" aria-hidden=\"true\"></i>");
-    } else {
-      music.play();
-     $(".toggle").val("play");
-     $(".toggle").html("<i class=\"fa fa-pause-circle\" aria-hidden=\"true\"></i>");
-    }
-  } 
+  
+  var file = document.getElementById("thefile");
+  var audio = document.getElementById("audio");
+  
+  file.onchange = function() {
+    var files = this.files;
+    audio.src = URL.createObjectURL(files[0]);
+    audio.load();
+    audio.play();
+    var context = new AudioContext();
+    var src = context.createMediaElementSource(audio);
+    var analyser = context.createAnalyser();
 
-function onYouTubeIframeAPIReady() {
-  var player;
-  player = new YT.Player('YouTubeBackgroundVideoPlayer', {
-      videoId: '{LeRETQ1_TXo}', // YouTube Video ID
-      width: 1280,               // Player width (in px)
-      height: 720,              // Player height (in px)
-      playerVars: {
-        playlist: '{$loadYouTubeVideoID}',
-          autoplay: 1,        // Auto-play the video on load
-          autohide: 1,
-          disablekb: 1, 
-          controls: 0,        // Hide pause/play buttons in player
-          showinfo: 0,        // Hide the video title
-          modestbranding: 1,  // Hide the Youtube Logo
-          loop: 1,            // Run the video in a loop
-          fs: 0,              // Hide the full screen button
-          autohide: 0,         // Hide video controls when playing
-          rel: 0,
-          enablejsapi: 1
-      },
-      events: {
-        onReady: function(e) {
-            e.target.mute();
-            e.target.setPlaybackQuality('hd1080');
-        },
-        onStateChange: function(e) {
-          if(e && e.data === 1){
-              var videoHolder = document.getElementById('home-banner-box');
-              if(videoHolder && videoHolder.id){
-                videoHolder.classList.remove('loading');
-              }
-          }else if(e && e.data === 0){
-            e.target.playVideo()
-          }
-        }
+    var canvas = document.getElementById("visretard");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    var ctx = canvas.getContext("2d");
+
+    src.connect(analyser);
+    analyser.connect(context.destination);
+
+    analyser.fftSize = 256;
+
+    var bufferLength = analyser.frequencyBinCount;
+    console.log(bufferLength);
+
+    var dataArray = new Uint8Array(bufferLength);
+
+    var WIDTH = canvas.width;
+    var HEIGHT = canvas.height;
+
+    var barWidth = (WIDTH / bufferLength) * 2.5;
+    var barHeight;
+    var x = 0;
+
+    function renderFrame() {
+      requestAnimationFrame(renderFrame);
+
+      x = 0;
+
+      analyser.getByteFrequencyData(dataArray);
+
+      ctx.fillStyle = "#000";
+      ctx.fillRect(0, 0, WIDTH, HEIGHT);
+
+      for (var i = 0; i < bufferLength; i++) {
+        barHeight = dataArray[i];
+        
+        var r = barHeight + (25 * (i/bufferLength));
+        var g = 250 * (i/bufferLength);
+        var b = 50;
+
+        ctx.fillStyle = "rgb(" + r + "," + g + "," + b + ")";
+        ctx.fillRect(x, HEIGHT - barHeight, barWidth, barHeight);
+
+        x += barWidth + 1;
       }
-  });
+    }
+
+    audio.play();
+    renderFrame();
+  };
+};
+
+$(document).ready(function() {
+var canvas = $('retardrain')[0];
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+if (canvas.getContext) {
+var ctx = canvas.getContext('2d');
+var w = canvas.width;
+var h = canvas.height;
+ctx.strokeStyle = 'rgba(174,194,224,0.5)';
+ctx.lineWidth = 1;
+ctx.lineCap = 'round';
+var init = [];
+var maxParts = 50;
+for (var a = 0; a < maxParts; a++) {
+init.push({
+x: Math.random() * w,
+y: Math.random() * h,
+l: Math.random() * 1,
+xs: -4 + Math.random() * 3 + 2,
+ys: Math.random() * 10 + 7
+})
 }
-	
+var particles = [];
+for (var b = 0; b < maxParts; b++) {
+particles[b] = init[b];
+}
+function draw() {
+ctx.clearRect(0, 0, w, h);
+for (var c = 0; c < particles.length; c++) {
+var p = particles[c];
+ctx.beginPath();
+ctx.moveTo(p.x, p.y);
+ctx.lineTo(p.x + p.l * p.xs, p.y + p.l * p.ys);
+ctx.stroke();
+}
+move();
+}
+function move() {
+for (var b = 0; b < particles.length; b++) {
+var p = particles[b];
+p.x += p.xs;
+p.y += p.ys;
+if (p.x > w || p.y > h) {
+p.x = Math.random() * w;
+p.y = -20;
+}
+}
+}
+setInterval(draw, 30);
+}
+});

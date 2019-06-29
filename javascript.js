@@ -26,10 +26,9 @@ I Stole all of this v2
 
 window.onload = function() {
   
-  var file = document.getElementById("audio");
   var audio = document.getElementById("audio");
   
-  file.onchange = function() {
+audio.onload = function() {
     var files = this.files;
     audio.src = URL.createObjectURL(files[0]);
     audio.load();

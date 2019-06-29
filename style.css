@@ -162,11 +162,19 @@ h1{
 }
 
 br {
-    line-height: 150%;
+    line-height: 300%;
 }
 
 .bg {
   background-image: url("WEBBG.png");
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cutout {
+  background-image: url("cutout.png");
   height: 100%; 
   background-position: center;
   background-repeat: no-repeat;

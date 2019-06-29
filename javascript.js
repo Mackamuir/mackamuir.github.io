@@ -26,9 +26,10 @@ I Stole all of this v2
 
 window.onload = function() {
   
+  var file = document.getElementById("audio");
   var audio = document.getElementById("audio");
   
-  audio.onload = function() {
+  file.onchange = function() {
     var files = this.files;
     audio.src = URL.createObjectURL(files[0]);
     audio.load();
@@ -37,7 +38,7 @@ window.onload = function() {
     var src = context.createMediaElementSource(audio);
     var analyser = context.createAnalyser();
 
-    var canvas = document.getElementById("visretard");
+    var canvas = document.getElementById("canvas");
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     var ctx = canvas.getContext("2d");

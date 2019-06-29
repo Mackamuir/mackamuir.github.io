@@ -28,7 +28,7 @@ window.onload = function() {
   
   var audio = document.getElementById("audio");
   
-  window.onload = function() {
+  audio.onload = function() {
     var files = this.files;
     audio.src = URL.createObjectURL(files[0]);
     audio.load();

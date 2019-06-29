@@ -173,7 +173,8 @@ br {
   background-size: cover;
 }
 
-img {
+.cutout {
   height: 100%; 
-  position: center;
+  width: 100%;
+  overflow: hidden;
 }

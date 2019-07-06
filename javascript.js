@@ -24,67 +24,6 @@
 I Stole all of this v2
 */
 
-window.onload = function() {
-      alert("AAAAAAAAAaaaaaaa");
-    var audio = document.getElementById("audio");
-    var files = this.files;
-    audio.src = URL.createObjectURL(files[0]);
-    audio.load();
-    audio.play();
-    var context = new AudioContext();
-    var src = context.createMediaElementSource(audio);
-    var analyser = context.createAnalyser();
-
-    var canvas = document.getElementById("canvas");
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    var ctx = canvas.getContext("2d");
-
-    src.connect(analyser);
-    analyser.connect(context.destination);
-
-    analyser.fftSize = 256;
-
-    var bufferLength = analyser.frequencyBinCount;
-    console.log(bufferLength);
-
-    var dataArray = new Uint8Array(bufferLength);
-
-    var WIDTH = canvas.width;
-    var HEIGHT = canvas.height;
-
-    var barWidth = (WIDTH / bufferLength) * 2.5;
-    var barHeight;
-    var x = 0;
-
-    function renderFrame() {
-      requestAnimationFrame(renderFrame);
-
-      x = 0;
-
-      analyser.getByteFrequencyData(dataArray);
-
-      ctx.fillStyle = "#000";
-      ctx.fillRect(0, 0, WIDTH, HEIGHT);
-
-      for (var i = 0; i < bufferLength; i++) {
-        barHeight = dataArray[i];
-        
-        var r = barHeight + (25 * (i/bufferLength));
-        var g = 250 * (i/bufferLength);
-        var b = 50;
-
-        ctx.fillStyle = "rgb(" + r + "," + g + "," + b + ")";
-        ctx.fillRect(x, HEIGHT - barHeight, barWidth, barHeight);
-
-        x += barWidth + 1;
-      }
-    }
-
-    audio.play();
-    renderFrame();
-  };
-};
 
 $(document).ready(function() {
 var canvas = $('retardrain')[0];
@@ -137,3 +76,60 @@ p.y = -20;
 setInterval(draw, 30);
 }
 });
+
+// music
+var fft, // Allow us to analyze the song
+    numBars = 1024, // The number of bars to use; power of 2 from 16 to 1024
+    song; // The p5 sound object
+
+// Load our song
+var loader = document.querySelector(".loader");
+document.getElementById("audiofile").onchange = function(event) {
+    if(event.target.files[0]) {
+        if(typeof song != "undefined") { // Catch already playing songs
+            song.disconnect();
+            song.stop();
+        }
+        
+        // Load our new song
+        song = loadSound(URL.createObjectURL(event.target.files[0]));
+        loader.classList.add("loading");
+    }
+}
+
+var canvas;
+function setup() { // Setup p5.js
+    canvas = createCanvas(windowWidth, windowHeight);
+}
+
+function draw() {
+    background(51);
+    
+    if(typeof song != "undefined" 
+       && song.isLoaded() 
+       && !song.isPlaying()) { // Do once
+        loader.classList.remove("loading");
+        
+        song.play();
+        song.setVolume(0.5);
+
+        fft = new p5.FFT();
+        fft.waveform(numBars);
+        fft.smooth(0.85);
+    }
+    
+    if(typeof fft != "undefined") {
+        var spectrum = fft.analyze();
+        noStroke();
+        fill("rgb(0, 255, 0)");
+        for(var i = 0; i < numBars; i++) {
+            var x = map(i, 0, numBars, 0, width);
+            var h = -height + map(spectrum[i], 0, 255, height, 0);
+            rect(x, height, width / numBars, h);
+        }
+    }
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}

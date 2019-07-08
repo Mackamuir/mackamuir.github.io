@@ -84,7 +84,7 @@ var fft, // Allow us to analyze the song
 
 // Load our song
 var loader = document.querySelector(".loader");
-document.getElementById("audiofile").onchange = function(event) {
+document.getElementById("player").onload = function(event) {
     if(event.target.files[0]) {
         if(typeof song != "undefined") { // Catch already playing songs
             song.disconnect();

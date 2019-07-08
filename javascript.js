@@ -83,18 +83,8 @@ var fft, // Allow us to analyze the song
     song; // The p5 sound object
 
 // Load our song
-var loader = document.querySelector(".loader");
-document.getElementById("moosic").onload = function(event) {
-    if(event.target.files[0]) {
-        if(typeof song != "undefined") { // Catch already playing songs
-            song.disconnect();
-            song.stop();
-        }
-        
-        // Load our new song
-        song = loadSound(URL.createObjectURL(event.target.files[0]));
-        loader.classList.add("loading");
-    }
+function preload() {
+          song = loadsound('webm.mp3');
 }
 
 var canvas;
@@ -104,13 +94,7 @@ function setup() { // Setup p5.js
 
 function draw() {
     background(51);
-    
-    if(typeof song != "undefined" 
-       && song.isLoaded() 
-       && !song.isPlaying()) { // Do once
-        loader.classList.remove("loading");
-        
-        song.play();
+            
         song.setVolume(0.5);
 
         fft = new p5.FFT();

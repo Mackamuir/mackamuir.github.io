@@ -23,97 +23,67 @@
          \/____/                  \/____/                  \/____/                  \|___|   
 I Stole all of this v2
 */
+window.onload = function() {
+  
+  var audio = document.getElementById("audio");
+  
+  console.log(audio)
 
+  //var files = this.files;
+  //audio.src = URL.createObjectURL(audio);
+  audio.load();
+  audio.play();
+  var context = new AudioContext();
+  audio.crossOrigin = "anonymous";
+  var src = context.createMediaElementSource(audio);
+  var analyser = context.createAnalyser();
 
-$(document).ready(function() {
-var canvas = $('retardrain')[0];
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-if (canvas.getContext) {
-var ctx = canvas.getContext('2d');
-var w = canvas.width;
-var h = canvas.height;
-ctx.strokeStyle = 'rgba(174,194,224,0.5)';
-ctx.lineWidth = 1;
-ctx.lineCap = 'round';
-var init = [];
-var maxParts = 50;
-for (var a = 0; a < maxParts; a++) {
-init.push({
-x: Math.random() * w,
-y: Math.random() * h,
-l: Math.random() * 1,
-xs: -4 + Math.random() * 3 + 2,
-ys: Math.random() * 10 + 7
-})
-}
-var particles = [];
-for (var b = 0; b < maxParts; b++) {
-particles[b] = init[b];
-}
-function draw() {
-ctx.clearRect(0, 0, w, h);
-for (var c = 0; c < particles.length; c++) {
-var p = particles[c];
-ctx.beginPath();
-ctx.moveTo(p.x, p.y);
-ctx.lineTo(p.x + p.l * p.xs, p.y + p.l * p.ys);
-ctx.stroke();
-}
-move();
-}
-function move() {
-for (var b = 0; b < particles.length; b++) {
-var p = particles[b];
-p.x += p.xs;
-p.y += p.ys;
-if (p.x > w || p.y > h) {
-p.x = Math.random() * w;
-p.y = -20;
-}
-}
-}
-setInterval(draw, 30);
-}
-});
+  var canvas = document.getElementById("canvas");
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  var ctx = canvas.getContext("2d");
 
-// music
-var fft, // Allow us to analyze the song
-    numBars = 1024, // The number of bars to use; power of 2 from 16 to 1024
-    song; // The p5 sound object
+  src.connect(analyser);
+  analyser.connect(context.destination);
 
-// Load our song
-function preload() {
-          song = loadsound('webm.mp3');
-}
+  analyser.fftSize = 256;
 
-var canvas;
-function setup() { // Setup p5.js
-    canvas = createCanvas(windowWidth, windowHeight);
-}
+  var bufferLength = analyser.frequencyBinCount;
+  console.log(bufferLength);
 
-function draw() {
-    background(51);
-            
-        song.setVolume(0.5);
+  var dataArray = new Uint8Array(bufferLength);
 
-        fft = new p5.FFT();
-        fft.waveform(numBars);
-        fft.smooth(0.85);
+  var WIDTH = canvas.width;
+  var HEIGHT = canvas.height;
+
+  var barWidth = (WIDTH / bufferLength) * 2.5;
+  var barHeight;
+  var x = 0;
+
+  function renderFrame() {
+    requestAnimationFrame(renderFrame);
+
+    x = 0;
+
+    analyser.getByteFrequencyData(dataArray);
+
+    ctx.fillStyle = "#000";
+    ctx.fillRect(0, 0, WIDTH, HEIGHT);
+
+    for (var i = 0; i < bufferLength; i++) {
+      barHeight = dataArray[i];
+        
+      var r = barHeight + (25 * (i/bufferLength));
+      var g = 250 * (i/bufferLength);
+      var b = 50;
+
+      ctx.fillStyle = "rgb(" + r + "," + g + "," + b + ")";
+      ctx.fillRect(x, HEIGHT - barHeight, barWidth, barHeight);
+
+      x += barWidth + 1;
     }
-    
-    if(typeof fft != "undefined") {
-        var spectrum = fft.analyze();
-        noStroke();
-        fill("rgb(0, 255, 0)");
-        for(var i = 0; i < numBars; i++) {
-            var x = map(i, 0, numBars, 0, width);
-            var h = -height + map(spectrum[i], 0, 255, height, 0);
-            rect(x, height, width / numBars, h);
-        }
-    }
-}
+  }
 
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-}
+  audio.play();
+  renderFrame();
+};

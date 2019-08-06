@@ -67,7 +67,7 @@ window.onload = function() {
 
     analyser.getByteFrequencyData(dataArray);
 
-    ctx.fillStyle = "rgba(0, 0, 0, 0)";
+    ctx.fillStyle = "rgba(0, 0, 0, 1)";
     ctx.fillRect(0, 0, WIDTH, HEIGHT);
 
     for (var i = 0; i < bufferLength; i++) {

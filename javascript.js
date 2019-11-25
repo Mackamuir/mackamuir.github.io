@@ -67,8 +67,12 @@ window.onload = function() {
 
     analyser.getByteFrequencyData(dataArray);
 
-    ctx.fillStyle = "rgba(0, 0, 0, 1)";
-    ctx.fillRect(0, 0, WIDTH, HEIGHT);
+var ctx = c.getContext("2d");
+var img = document.getElementById("WEBBG");
+var pat = ctx.createPattern(img, "no-repeat");
+ctx.rect(0, 0, 150, 100);
+ctx.fillStyle = pat;
+ctx.fill();
 
     for (var i = 0; i < bufferLength; i++) {
       barHeight = dataArray[i];

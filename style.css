@@ -153,7 +153,7 @@ h1{
 .front {
 	z-index: 2;
 	transform: rotateY(0deg);
-  	font-family: "wingdings";
+  	font-family: "wingding.ttf";
   	font-size: 300;
   	top: 50%;
   	text-align: center;

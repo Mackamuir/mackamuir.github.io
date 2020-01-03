@@ -21,8 +21,10 @@
         /:::/    /               /:::/    /              \:::\____\               \::|   |          
         \::/    /                \::/    /                \::/    /                \:|   |          
          \/____/                  \/____/                  \/____/                  \|___|   
-I Stole all of this v2
+I Stole all of this v3
 */
+
+
 window.AudioContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext;
 
 var start = function() {
@@ -66,15 +68,16 @@ var start = function() {
             };
             ctx.fillStyle = capStyle;
             //draw the cap, with transition effect
-            if (value < capYPositionArray[i]) {
+            /*if (value < capYPositionArray[i]) {
                 ctx.fillRect(i * 12, cheight - (--capYPositionArray[i]), meterWidth, capHeight);
             } else {
                 ctx.fillRect(i * 12, cheight - value, meterWidth, capHeight);
                 capYPositionArray[i] = value;
             };
             ctx.fillStyle = gradient; //set the filllStyle to gradient for a better look
-            ctx.fillRect(i * 12 /*meterWidth+gap*/ , cheight - value + capHeight, meterWidth, cheight); //the meter
-        }
+            ctx.fillRect(i * 12 /*meterWidth+gap*/// , cheight - value + capHeight, meterWidth, cheight); //the meter
+      //  }
+
         requestAnimationFrame(renderFrame);
     }
     renderFrame();
